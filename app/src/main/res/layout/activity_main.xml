@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SerchList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="332dp"
+        android:layout_marginTop="48dp"
+        android:text="Test_text"
+        android:textSize="70sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/List_kaigi"
+        android:layout_width="960dp"
+        android:layout_height="937dp"
+        android:scrollbarSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnMknew"
+        android:layout_width="320dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="128dp"
+        android:text="新規作成"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="320dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="64dp"
+        android:text="参加"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMknew" />
+
+    <android.widget.SearchView
+        android:id="@+id/searchList"
+        android:layout_width="960dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="2dp"
+        android:queryHint="会議を検索"
+        app:layout_constraintBottom_toTopOf="@+id/List_kaigi"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
